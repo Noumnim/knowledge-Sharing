@@ -1,13 +1,18 @@
-import { useEffect, useId, useRef, useState } from 'react';
 import './App.css';
-import icon from './assets/iconReact.png'
+import ContextComponent from './components/context/ContextComponent';
+import Header from './components/Header/Header';
+import { createContext } from 'react';
+import { data } from './data';
+import Navbar from './components/nav/navbar';
 
+export const DataContext = createContext();
 function App() {
- 
+
   return (
-    <div>
-     
-    </div>
+    <DataContext.Provider value={data}>
+      <Header/>
+      <Navbar/>
+    </DataContext.Provider>
   )
 }
 export default App;
