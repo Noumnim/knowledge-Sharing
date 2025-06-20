@@ -1,10 +1,7 @@
-import { useContext } from "react";
-import { DataContext } from "../../App";
 import './header.css'
-
+import { data } from "../../data";
 export default function Header() {
-  const data = useContext(DataContext);
-  console.log(data);
+ 
   return (
     <div className="headerbody">
       <img src={data.image} height={100}/>

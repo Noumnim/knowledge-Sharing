@@ -1,9 +1,7 @@
-import React, { useContext, useState } from 'react'
-import { DataContext } from '../../App'
-import './navbar.css'
-import CompoExample from '../componentExample/CompoExample';
+import React, { useState } from 'react'
+import CompoExample from '../mapComponent/Compo';
+import { data } from '../../data';
 export default function Navbar() {
-    const data = useContext(DataContext);
     const [tabActive, setTabActive] = useState('useState')
     const handleClickTab = (e) => {
         setTabActive(e.target.value)

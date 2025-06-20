@@ -28,6 +28,34 @@ export const data =
                 title: 'useEffect',
                 description:
                     'ໃຊ້ຈັດການ "ຜົນຂ້າງຄຽງ" ເຊັ່ນ: ດຶງຂໍ້ມູນຈາກ API,ອັພເດດ DOM ຫຼັງຈາກ render. ',
+                code:`
+                import{ useEffect, useState } from 'react';
+                export default function EffectComponent() {
+                const [image, setImage] = useState('');
+
+                const fetchImage = async () => {
+                    try {
+                    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                    const data = await res.json();
+                    setImage(data.message);
+                    } catch (err) {
+                    console.error('Error fetching image:', err);
+                    }
+                };
+                useEffect(() => {
+                    fetchImage();
+                }, []);
+
+                return (
+                    <div id='useEffect'>
+                    <img src={image} alt="Random dog"/>
+                    <br />
+                    <button onClick={fetchImage}><h1>Random Dog</h1></button>
+                    </div>
+                );
+                }
+
+                `
             },
             {
                 title: 'useContext',
@@ -47,12 +75,12 @@ export const data =
             {
                 title: 'useMemo',
                 description:
-                    'ໃຊ້ຈົດຈຳຄ່າທີ່ຄຳນວນແລ້ວ ບໍ່ໃຫ້ຄຳນວນໃໝ່ທຸກຄັ້ງທີ່ component render ເໝາະກັບການປະມວນຜົນໜັກ.',
+                    'ໃຊ້ຈົດຈຳຄ່າທີ່ຄຳນວນແລ້ວ ບໍ່ໃຫ້ຄຳນວນໃໝ່ທຸກຄັ້ງທີ່ component render ເໝາະກັບການປະມວນຜົນໜັກ. ເຮັດວຽກລະຫວ່າງການ render.',
             },
             {
                 title: 'useRef',
                 description:
-                    'ໃຊ້ເກັບຄ່າຫຼືອ້າງອີງ DOM ໂດຍບໍ່ກະທົບການ render ເຊັ່ນ ໃຊ້ເພື່ອ focus input ຫຼືເກັບຄ່າລະຫວ່າງຮອບ render.',
+                    'ໃຊ້ເກັບຄ່າຫຼືອ້າງອີງ DOM ໂດຍບໍ່ກະທົບການ render ເຊັ່ນ ໃຊ້ເພື່ອ focus input ຫຼືເກັບຄ່າລະຫວ່າງຮອບ render. ມັນຈະບໍ່ re-render ເມື່ອຂໍ້ມູນອັພເດດ ເຊັ່ນ focus input, previous value ແລະ ອື່ນໆ',
             },
             {
                 title: 'useLayoutEffect',

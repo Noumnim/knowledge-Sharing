@@ -1,18 +1,15 @@
 import './App.css';
-import ContextComponent from './components/context/ContextComponent';
+import LangProvider from './components/context/LangPovider';
 import Header from './components/Header/Header';
-import { createContext } from 'react';
-import { data } from './data';
-import Navbar from './components/nav/navbar';
+import Navbar from './components/nav/Navbar';
 
-export const DataContext = createContext();
 function App() {
 
   return (
-    <DataContext.Provider value={data}>
+    <LangProvider>
       <Header/>
       <Navbar/>
-    </DataContext.Provider>
+    </LangProvider>
   )
 }
 export default App;

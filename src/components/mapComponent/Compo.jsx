@@ -1,13 +1,13 @@
 import React from 'react'
-import StateComponent from '../state/StateComponent'
-import EffectComponent from '../effect/EffectComponent'
-import ContextComponent from '../context/ContextComponent'
-import ReducerComponent from '../reducer/ReducerComponent'
-import CallbackComponent from '../callback/CallbackComponent'
-import MemoComponent from '../memo/MemoComponent'
-import RefComponent from '../ref/RefComponent'
-import LayoutComponent from '../layoutEffect/LayoutComponent'
-import ImperComponent from '../imperativeHandle/ImperComponent'
+import StateComponent from '../StateComponent'
+import EffectComponent from '../EffectComponent'
+import ReducerComponent from '../ReducerComponent'
+import CallbackComponent from '../CallbackComponent'
+import MemoComponent from '../MemoComponent'
+import RefComponent from '../RefComponent'
+import LayoutComponent from '../LayoutComponent'
+import ImperComponent from '../ImperComponent'
+import ContextComponent from '../ContextComponent'
 
 export default function CompoExample({title}) {
     const componentMap ={

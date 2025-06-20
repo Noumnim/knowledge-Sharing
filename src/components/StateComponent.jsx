@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import './state.css'
+import { useState } from 'react'
 function StateComponent() {
     const [count,setCount]=useState(0);
 
   return (
-    <div className='state'>
+    <div >
+      
         <h1>Count is {count}</h1>
-        <button onClick={()=>setCount(count+1)}>+</button>
+        <div className='state'>
+          <button onClick={()=>setCount(count+1)}>+</button>
         <button onClick={()=>setCount(count-1)}>-</button>
+        </div>
+        
     </div>
   )
 }
