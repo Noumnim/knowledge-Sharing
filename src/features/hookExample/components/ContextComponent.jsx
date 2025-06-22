@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { LangContext } from './context/LangContext';
+import { LangContext } from '../../../context/LangPovider';
 const texts = {
   en: 'Hello',
   lao: 'ສະບາຍດີ',

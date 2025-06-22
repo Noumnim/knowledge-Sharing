@@ -1,5 +1,4 @@
-import './header.css'
-import { data } from "../../data";
+import { data } from "../../features/hookExample/data";
 export default function Header() {
  
   return (

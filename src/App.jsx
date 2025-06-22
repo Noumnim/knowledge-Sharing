@@ -1,5 +1,5 @@
 import './App.css';
-import LangProvider from './components/context/LangPovider';
+import LangProvider from './context/LangPovider';
 import Header from './components/Header/Header';
 import Navbar from './components/nav/Navbar';
 

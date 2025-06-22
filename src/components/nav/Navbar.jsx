@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import CompoExample from '../mapComponent/Compo';
-import { data } from '../../data';
+import { data } from '../../features/hookExample/data';
+import SelectedComponent from '../../features/hookExample/SelectedComponent';
 export default function Navbar() {
     const [tabActive, setTabActive] = useState('useState')
     const handleClickTab = (e) => {
@@ -27,7 +27,7 @@ export default function Navbar() {
                                    {item.code? item.code:''} 
                                 </code>
                             </pre>
-                            <CompoExample title={item.title}/>
+                            <SelectedComponent title={item.title}/>
                         </div>
                     ))}
             </div>
