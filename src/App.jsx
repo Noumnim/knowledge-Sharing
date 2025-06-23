@@ -1,6 +1,6 @@
 import './App.css';
 import LangProvider from './context/LangPovider';
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 import Navbar from './components/nav/Navbar';
 
 function App() {
